@@ -1,0 +1,32 @@
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	.button
+	{
+		background-image: url('images/button.svg');
+	}
+	
+		.button:active
+		{
+			background-image: url('images/button-active.svg');
+		}
+		
+		.button-alt
+		{
+			background-image: url('images/button-alt.svg');
+		}
+		
+			.button-alt:active
+			{
+				background-image: url('images/button-alt-active.svg');
+			}
+
+	ul.social
+	{
+	}
+	
+		ul.social li
+		{
+			background-image: url('images/social-li.svg');
+		}
