@@ -46,7 +46,7 @@ This will create a `_site` folder within your project, ignore it. Jekyll already
 
 First, edit your `_config.yml` file to look like this:
 
-{% highlight html %}
+{% highlight text %}
 markdown: rdiscount
 highlighter: true
 permalink: /posts/:title
