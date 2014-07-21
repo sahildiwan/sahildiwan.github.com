@@ -81,7 +81,7 @@ Lastly, edit the `.gitignore` file and add `.DS_Store` below `_site`. You don't 
 
 Now we need to add the HTML, CSS, and JavaScript files used for this blog site.
 
-First, remove the folder called `_includes`, you won't need it. Next, go into `_layouts` and edit the `default.html` file to look like the code found [here][9]. Then, edit the `post.html` file to look like th code found [here][10]. Delete `page.html`.
+First, remove the folder called `_includes`, you won't need it. Next, go into `_layouts` and edit the `default.html` file to look like the code found [here][9]. Then, edit the `post.html` file to look like the code found [here][10]. Delete `page.html`.
 
 We don't actually need to add any CSS or JavaScript for this blogging site because we are linking the style-sheet and some JavaScript found [here][11] and [here][12].
 
