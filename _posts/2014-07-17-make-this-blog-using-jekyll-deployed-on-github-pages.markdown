@@ -56,6 +56,20 @@ rdiscount:
 
 Then, delete the `feed.xml` file and create a new XML file called `atom.xml` with the code found [here][7].
 
+*Couldn't post the code here because Jekyll was automatically rendering some of the dynamic code I wanted shown. #lookingoutforyou #inception
+
+Now, edit the `index.html` file with the following:
+
+{% highlight html %}
+---
+layout: default
+title: Title of page
+---
+
+<p>Write a nice short bio about yourself 
+here, it will be shown on the home page.</p>
+{% endhighlight %}
+
 
 [1]: http://jekyllrb.com/ 
 [2]: https://pages.github.com/
@@ -63,3 +77,4 @@ Then, delete the `feed.xml` file and create a new XML file called `atom.xml` wit
 [4]: http://jekyllrb.com/docs/installation/
 [5]: http://rubygems.org/pages/download
 [6]: http://0.0.0.0:4000/
+[7]: https://github.com/sahildiwan/sahildiwan.github.com/blob/master/atom.xml
