@@ -74,7 +74,13 @@ Next, create a file called `posts.html` and add the code found [here][8].
 
 Lastly, edit the `.gitignore` file and add `.DS_Store` below `_site`. You don't have to, but please just do it.
 
-`3.)` Adding the static front-end files to add styles
+`3.)` Adding static front-end files
+
+Now we need to add the HMLT, CSS, and JavaScript files used for this blog site.
+
+First, remove the folder called `_includes`, you won't need it.
+
+Next, 
 
 [1]: http://jekyllrb.com/ 
 [2]: https://pages.github.com/
