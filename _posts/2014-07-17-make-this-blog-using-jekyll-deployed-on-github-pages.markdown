@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to make this blog using Jekyll and deploy it on Github pages"
+title:  "How to make this blog using Jekyll and deploy it to Github pages"
 date:   2014-07-17 00:08:00
 categories: jekyll update
 ---
@@ -110,7 +110,7 @@ categories: jekyll update
 
 To learn what other fancy things you can do with markdown, go [here][13] or look at my [source code][3].
 
-`5.)` Deploying on Github Pages
+`5.)` Deploying to Github Pages
 
 Coming `soon`
 
