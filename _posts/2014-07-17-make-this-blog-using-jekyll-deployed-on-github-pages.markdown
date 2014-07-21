@@ -76,11 +76,9 @@ Lastly, edit the `.gitignore` file and add `.DS_Store` below `_site`. You don't 
 
 `3.)` Adding static front-end files
 
-Now we need to add the HMLT, CSS, and JavaScript files used for this blog site.
+Now we need to add the HTML, CSS, and JavaScript files used for this blog site.
 
-First, remove the folder called `_includes`, you won't need it.
-
-Next, 
+First, remove the folder called `_includes`, you won't need it. Next, go into `_layouts` and edit the `default.html` file to look like the code found [here][9]. Then, edit the `post.html` file to look like th code found [here][10]. Delete `page.html`.
 
 [1]: http://jekyllrb.com/ 
 [2]: https://pages.github.com/
@@ -90,3 +88,5 @@ Next,
 [6]: http://0.0.0.0:4000/
 [7]: https://github.com/sahildiwan/sahildiwan.github.com/blob/master/feed.xml
 [8]: https://github.com/sahildiwan/sahildiwan.github.com/blob/master/posts.html
+[9]: https://github.com/sahildiwan/sahildiwan.github.com/blob/master/_layouts/default.html
+[10]: https://github.com/sahildiwan/sahildiwan.github.com/blob/master/_layouts/post.html
