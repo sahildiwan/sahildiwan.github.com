@@ -108,7 +108,7 @@ categories: jekyll update
 ---
 {% endhighlight %}
 
-To learn what more fancy things you can do with markdown, go [here][13] or look at my [source code][3].
+To learn what other fancy things you can do with markdown, go [here][13] or look at my [source code][3].
 
 `5.)` Deploying on Github Pages
 
