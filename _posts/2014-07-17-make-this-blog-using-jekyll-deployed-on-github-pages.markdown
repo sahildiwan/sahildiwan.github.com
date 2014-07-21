@@ -11,8 +11,10 @@ Notes:
 
 - The source code for this project can be found [here][3].
 - I am running Mac OS X and this tutorial (at least installation) will be specific. If you are on a different OS go [here][4].
+- I couldn't post a lot of code here because Jekyll was automatically rendering some of the dynamic code I wanted shown. Therefore, I have linked those parts to the specific files in my Github repo.
+- Remember to swap out my content for yours :)
 
-So let's get started.
+Let's get started.
 
 `1.)` Installation and setup.
 
@@ -20,6 +22,7 @@ Assuming you have Ruby/[RubyGems][5] installed, and are running Mac OS X, run th
 
 {% highlight bash %}
 $ gem install jekyll
+$ gem install rdiscount
 {% endhighlight %}
 
 *Add a `sudo` in front of it if you need root permission.
@@ -48,7 +51,7 @@ First, edit your `_config.yml` file to look like this:
 
 {% highlight text %}
 markdown: rdiscount
-highlighter: true
+pygments: true
 permalink: /posts/:title
 rdiscount:
   extensions: [smart]
@@ -56,7 +59,7 @@ rdiscount:
 
 Then, edit the `feed.xml` file to look like the the code found [here][7].
 
-*Couldn't post the code here because Jekyll was automatically rendering some of the dynamic code I wanted shown. #lookingoutforyou #inception
+*Reminder: couldn't post the code here because Jekyll was automatically rendering some of the dynamic code I wanted shown. #lookingoutforyou #inception
 
 Now, edit the `index.html` file to look like this:
 
@@ -80,6 +83,37 @@ Now we need to add the HTML, CSS, and JavaScript files used for this blog site.
 
 First, remove the folder called `_includes`, you won't need it. Next, go into `_layouts` and edit the `default.html` file to look like the code found [here][9]. Then, edit the `post.html` file to look like th code found [here][10]. Delete `page.html`.
 
+We don't actually need to add any CSS or JavaScript for this blogging site because we are linking the style-sheet and some JavaScript found [here][11] and [here][12].
+
+Run
+
+{% highlight bash %}
+$ jekyll serve
+{% endhighlight %}
+
+And you should see your new blog at [http://0.0.0.0:4000/][6]. All we have left now to do is write some posts and deploy to [Github Pages][2]. As you can see, Jekyll has already made your first post for you.
+
+`4.)` Writing blog posts in Markdown
+
+All posts you write for your Jekyll site must go in the `_posts` folder. There is one other rule, you must name your `.markdown` files using the convention `YYYY-MM-DD-name-of-post.markdown`.
+
+At the beginning of each of your `.markdown` files make sure to add the following:
+
+{% highlight text %}
+---
+layout: post
+title:  "Title of blog post"
+date:   YYYY-MM-DD XX:YY:ZZ
+categories: jekyll update
+---
+{% endhighlight %}
+
+To learn what more fancy things you can do with markdown, go [here][13] or look at my [source code][3].
+
+`5.)` Deploying on Github Pages
+
+Coming `soon`
+
 [1]: http://jekyllrb.com/ 
 [2]: https://pages.github.com/
 [3]: https://github.com/sahildiwan/sahildiwan.github.com
@@ -90,3 +124,6 @@ First, remove the folder called `_includes`, you won't need it. Next, go into `_
 [8]: https://github.com/sahildiwan/sahildiwan.github.com/blob/master/posts.html
 [9]: https://github.com/sahildiwan/sahildiwan.github.com/blob/master/_layouts/default.html
 [10]: https://github.com/sahildiwan/sahildiwan.github.com/blob/master/_layouts/post.html
+[11]: https://github.com/themes/minimal/stylesheets/styles.css
+[12]: https://github.com/themes/minimal/javascripts/scale.fix.js
+[13]: https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
