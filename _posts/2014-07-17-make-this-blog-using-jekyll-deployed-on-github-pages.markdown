@@ -85,7 +85,7 @@ First, remove the folder called `_includes`, you won't need it. Next, go into `_
 
 We don't actually need to add any CSS or JavaScript for this blogging site because we are linking the style-sheet and some JavaScript found [here][11] and [here][12].
 
-Run
+Run,
 
 {% highlight bash %}
 $ jekyll serve
