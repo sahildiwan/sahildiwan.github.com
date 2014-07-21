@@ -5,7 +5,7 @@ date:   2014-07-17 00:08:00
 categories: jekyll update
 ---
 
-This blog post is about creating this exact blogging site using the simple, blog-aware, static site generator, [Jekyll][1]. Jekyll is the engine behind [Github Pages][2], the place you will be deploying for free once finished.  
+This blog post is about creating this exact blogging site using the simple, blog-aware, static site generator, [Jekyll][1]. Jekyll is the engine behind [Github Pages][2], the place you will be deploying for free once finished. I like using Jekyll because of the fact that I can write static posts in [markdown](http://en.wikipedia.org/wiki/markdown) instead of HTML.
 
 Notes: 
 
@@ -40,7 +40,7 @@ $ cd sexyblog
 $ jekyll serve
 {% endhighlight %}
 
-Jekyll already gives you a simple great looking site, if you are happy with it and just want to start writing blog posts skip to step `4`.
+This will create a `_site` folder within your project, ignore it. Jekyll already gives you a simple great looking site, if you are happy with it and just want to start writing blog posts skip to step `4`.
 
 `2.)` Configuration and adding/editing files
 
@@ -54,22 +54,27 @@ rdiscount:
   extensions: [smart]
 {% endhighlight %}
 
-Then, delete the `feed.xml` file and create a new XML file called `atom.xml` with the code found [here][7].
+Then, edit the `feed.xml` file to look like the the code found [here][7].
 
 *Couldn't post the code here because Jekyll was automatically rendering some of the dynamic code I wanted shown. #lookingoutforyou #inception
 
-Now, edit the `index.html` file with the following:
+Now, edit the `index.html` file to look like this:
 
 {% highlight html %}
 ---
 layout: default
-title: Title of page
+title: Add a title
 ---
 
 <p>Write a nice short bio about yourself 
 here, it will be shown on the home page.</p>
 {% endhighlight %}
 
+Next, create a file called `posts.html` and add the code found [here][8].
+
+Lastly, edit the `.gitignore` file and add `.DS_Store` below `_site`. You don't have to, but please just do it.
+
+`3.)` Adding the static front-end files to add styles
 
 [1]: http://jekyllrb.com/ 
 [2]: https://pages.github.com/
@@ -77,4 +82,5 @@ here, it will be shown on the home page.</p>
 [4]: http://jekyllrb.com/docs/installation/
 [5]: http://rubygems.org/pages/download
 [6]: http://0.0.0.0:4000/
-[7]: https://github.com/sahildiwan/sahildiwan.github.com/blob/master/atom.xml
+[7]: https://github.com/sahildiwan/sahildiwan.github.com/blob/master/feed.xml
+[8]: https://github.com/sahildiwan/sahildiwan.github.com/blob/master/posts.html
