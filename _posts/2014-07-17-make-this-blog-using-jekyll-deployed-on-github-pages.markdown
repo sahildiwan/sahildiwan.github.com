@@ -112,7 +112,7 @@ To learn what other fancy things you can do with markdown, go [here][13] or look
 
 `5.)` Deploying to Github Pages
 
-Coming `soon`
+To deploy your newly made, Jekyll backed blogging site, follow the detailed instructions Github has supplied [here][14]. Once you push this to your `username.github.io` repo, Github will automatically recognize that this is a Jekyll app and take care of everything for you. If you want to add a custom domain (i.e. blog.sahildiwan.com) follow the instructions Github has supplied [here][15].
 
 [1]: http://jekyllrb.com/ 
 [2]: https://pages.github.com/
@@ -127,3 +127,5 @@ Coming `soon`
 [11]: https://github.com/themes/minimal/stylesheets/styles.css
 [12]: https://github.com/themes/minimal/javascripts/scale.fix.js
 [13]: https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
+[14]: https://pages.github.com/
+[15]: https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages#configuring-a-custom-subdomain-with-your-dns-provider
