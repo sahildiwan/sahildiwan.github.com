@@ -206,6 +206,20 @@ Add the following line to your `Procfile` which tells heroku what python file to
 web: gunicorn app:app
 {% endhighlight %}
 
+Open up your `app.py file and edit your imports and database connections to look like this
+
+{% highlight python %}
+from flask import Flask, render_template, request
+from flask.ext.sqlalchemy import SQLAlchemy
+
+from flask.ext.heroku import Heroku
+
+app = Flask(__name__)
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/pre-registration'
+heroku = Heroku(app)
+db = SQLAlchemy(app)
+{% endhighlight %}
+
 Since we have Heroku and git installed, run the following commands while in your `lovelypreregpage` project
 
 {% highlight bash %}
