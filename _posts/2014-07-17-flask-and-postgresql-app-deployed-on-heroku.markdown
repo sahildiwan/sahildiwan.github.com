@@ -181,7 +181,75 @@ Now, run `python app.py` in your terminal. You should see `* Running on http://1
 
 `3.)` Deploy to Heroku
 
-Coming `soon`.
+First, go to [Heroku][13] and install the Heroku toolbelt just like any other application. While you are at it, create an account on Heroku if you do not have one already. Make sure to add your ssh key(s). Then, before you can create a Heroku app from your existing project we need to turn it into a [git][14] repo. Go [here][14] to install git on your machine.
+
+Let's go ahead and create a couple more files we will need for deploying to Heroku
+
+{% highlight bash %}
+$ touch Procfile
+$ touch requirements.txt
+{% endhighlight %}
+
+Now, run the following to commands with your virtual environment running
+
+{% highlight bash %}
+$ pip install gunicorn
+$ pip install Flask-Heroku
+$ pip freeze > requirements.txt
+{% endhighlight %}
+
+That last command is putting all our app requirements into `requirements.txt` so Heroku knows what it needs to install.
+
+Add the following line to your `Procfile` which tells heroku what python file to execute
+
+{% highlight text %}
+web: gunicorn app:app
+{% endhighlight %}
+
+Since we have Heroku and git installed, run the following commands while in your `lovelypreregpage` project
+
+{% highlight bash %}
+$ git init
+$ git add .
+$ git commit -m "initial commit"
+$ heroku create name-of-your-app
+{% endhighlight %}
+
+The last command will automatically create a Heroku app using the name you give. Next, run the following command to push your Flask app up to Heroku
+
+{% highlight bash %}
+$ git push heroku master
+{% endhighlight %}
+
+Setting up a PostgreSQL database on Heroku is a lot like setting up a PostgreSQL database locally. Run the following commands
+
+{% highlight bash %}
+$ heroku addons:add heroku-postgresql:dev
+$ heroku pg:promote HEROKU_POSTGRESQL_COLOR_URL
+{% endhighlight %}
+
+*It is important to switch `HEROKU_POSTGRESQL_COLOR_URL` with the color shown to you after running the `heroku addons:add heroku-postgresql:dev` command.
+
+Now, run the following commands to create our database tables exactly as we did before
+
+{% highlight bash %}
+$ heroku run python
+>>> from app import db
+>>> db.create_all()
+>>> exit()
+{% endhighlight %}
+
+Finally, go to `name-of-your-app.herokuapp.com` and see your working pre-registration page! It is not the sexiest website, but now that you know how to make it you can spend time on front-end shenanigans.
+
+To see the live demo of this tutorial go to [flask-postgres-heroku.herokuapp.com](http://flask-postgres-heroku.herokuapp.com/).
+
+*Bonus, Heroku allows you to create [Dataclips](https://devcenter.heroku.com/articles/dataclips), which is similar to `Induction`. Create a `Dataclip` and run the query
+
+{% highlight text %}
+select * from users
+{% endhighlight %}
+
+to see all the users that have pre-registered for your awesome app.
 
 [1]: http://flask.pocoo.org/
 [2]: http://www.postgresql.org/
@@ -195,3 +263,5 @@ Coming `soon`.
 [10]: https://github.com/sahildiwan/flask-postgres-heroku/blob/master/templates/index.html
 [11]: https://github.com/sahildiwan/flask-postgres-heroku/blob/master/templates/success.html
 [12]: http://127.0.0.1:5000/
+[13]: https://toolbelt.heroku.com/
+[14]: http://git-scm.com/
