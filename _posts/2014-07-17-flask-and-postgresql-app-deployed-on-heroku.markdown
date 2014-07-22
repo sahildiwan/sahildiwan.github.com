@@ -10,7 +10,7 @@ This blog post is about creating a simple pre-registration page using the best (
 Notes: 
 
 - The source code for this project can be found [here][4].
-- A live demo of this project can be found on Heroku [here]().
+- A live demo of this project can be found on Heroku [here](http://flask-postgres-heroku.herokuapp.com/).
 - I am running Mac OS X and this tutorial (at least installation) will be specific.
 
 Let's get started.
