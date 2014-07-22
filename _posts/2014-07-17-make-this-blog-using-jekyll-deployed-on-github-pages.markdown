@@ -16,7 +16,7 @@ Notes:
 
 Let's get started.
 
-`1.)` Installation and setup.
+`1.)` Installation and setup
 
 Assuming you have Ruby/[RubyGems][5] installed, and are running Mac OS X, run the following command in your terminal.
 
